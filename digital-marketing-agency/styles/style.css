@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Permanent+Marker&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+:root {
+  --black: #000;
+  --white: #fff;
+  --grenn: #006a19;
+  --bleu: #02797e;
+  --background: #f2f4f2;
+
+  --ff-title: "Permanent Marker", cursive;
+  --fw-title: 400;
+  --fz-h1-h2: 36px;
+  --lh-h1-h2: 57px;
+
+  --fz-h3: 20px;
+  --lh-h3: 22px;
+
+  --ff-p: "Open Sans", sans-serif;
+  --fz-p: 16px;
+  --fw-p: normal;
+  --lh-p: 24px;
+
+  --ff-a: "Roboto", sans-serif;
+  --fz-a: 16px;
+  --fw-a: 600;
+  --lh-a: 20px;
+}
+/* Common */
+h1,
+h2 {
+  font-size: var(--fz-h1-h2);
+  line-height: var(--lh-h1-h2);
+  color: var(--grenn);
+}
+h3 {
+  font-size: var(--fz-h3);
+  line-height: var(--lh-h3);
+  color: var(--bleu);
+}
+h1,
+h2,
+h3 {
+  font-family: var(--ff-title);
+  font-weight: var(--fw-h1);
+}
+p {
+  font-family: var(--ff-p);
+  font-size: var(--fz-p);
+  font-weight: var(--fw-p);
+  line-height: var(--lh-p);
+}
+ul {
+  list-style: none;
+}
+a {
+  font-family: var(--ff-a);
+  font-size: var(--fz-a);
+  font-weight: var(--fw-a);
+  line-height: var(--lh-a);
+  text-decoration: none;
+  color: var(--black);
+  &:hover {
+    transition: 0.5s;
+    color: var(--grenn);
+  }
+}
+.active {
+  color: var(--grenn);
+}
+.hr {
+  border-top: 3px solid green;
+  width: 80px;
+}
+.btn {
+  color: var(--white);
+  background-color: var(--grenn);
+  padding: 12px 24px;
+  border: none;
+  border-radius: 3px;
+}
+header {
+  > div {
+    text-align: center;
+    img {
+      width: 200px;
+    }
+  }
+  nav {
+    padding: 20px;
+    ul {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+}
+footer {
+  padding: 20px;
+  a,
+  p {
+    text-align: center;
+    color: var(--bleu);
+    font-weight: normal;
+  }
+}
+#home {
+  #about {
+    background-color: var(--background);
+    > div {
+      max-width: 1440px;
+      margin: auto;
+      padding: 40px 15px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-items: center;
+      align-items: center;
+      article {
+        padding-right: 17%;
+        > div {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+        p {
+          padding-bottom: 10px;
+        }
+      }
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
