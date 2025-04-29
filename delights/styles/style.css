@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Prata&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+:root {
+  --text-color: #000;
+  --background: #f7f7f7;
+  --background-alt: #333333;
+
+  --ff-title: "Prata", serif;
+  --fz-title: 52px;
+  --fw-title: normal;
+  --ff-p: "Prata", serif;
+  --fz-p: 16px;
+  --fw-p: normal;
+
+  --card-box-shadow: 0px 0px 10px 0px #00000033;
+  --card-radius: 12px;
+}
+h1,
+h2 {
+  font-family: var(--ff-title);
+  font-size: var(--fz-title);
+  font-weight: var(--fw-title);
+}
+p {
+  font-family: var(--ff-p);
+  font-size: var(--fz-p);
+  font-weight: var(--fw-p);
+}
+
+a {
+  font-family: var(--ff-p);
+  text-decoration: none;
+  color: var(--text-color);
+}
+header {
+  max-width: 1920px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  img {
+    width: 180px;
+  }
+  ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+  }
+}
+footer {
+  max-width: 1920px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  > div {
+    display: flex;
+    gap: 20px;
+  }
+}
