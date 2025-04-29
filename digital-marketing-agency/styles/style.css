@@ -87,6 +87,9 @@ a {
   align-items: center;
   gap: 25px;
 }
+label {
+  font-family: var(--ff-p);
+}
 header {
   > div {
     text-align: center;
@@ -188,6 +191,7 @@ footer {
       padding: 150px 15px;
       > div:nth-child(2) {
         display: flex;
+        align-items: center;
         gap: 50px;
         img {
           width: 100%;
@@ -214,7 +218,7 @@ footer {
       }
     }
     > div:nth-child(3) {
-      margin: 50px 0;
+      margin-top: 75px;
       text-align: center;
     }
   }
@@ -230,12 +234,100 @@ footer {
         gap: 50px;
         justify-items: center;
         padding: 35px 0;
+        align-items: center;
+        > div {
+          margin-left: 22%;
+        }
         > div > div > div:nth-child(n + 1) {
           display: flex;
           align-items: center;
           gap: 10px;
+          padding: 12px;
+        }
+        > form {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          > div:nth-child(-n + 3) {
+            display: flex;
+            flex-direction: column;
+            label {
+              margin-bottom: 12px;
+            }
+            input[type="text"],
+            textarea {
+              padding: 12px;
+            }
+          }
+          > div:nth-child(5) {
+            margin-top: 50px;
+          }
         }
       }
     }
+  }
+}
+@media screen and (max-width: 1024px) {
+  #home {
+    & #about {
+      > div {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 20px;
+        article {
+          padding: 0;
+        }
+      }
+      img {
+        height: 400px;
+        object-fit: cover;
+        object-position: 0 23%;
+        border-radius: 12px 12px 0 0;
+      }
+    }
+    #skill {
+      & > div:nth-child(2) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 45px;
+        > article:nth-child(-n + 3) {
+          border-right: none;
+        }
+      }
+    }
+    #client {
+      > div {
+        > div:nth-child(n + 2) {
+          display: flex;
+          flex-wrap: wrap;
+          align-content: space-between;
+          gap: 35px;
+          > a:nth-child(n + 1) {
+            flex: 1 0 30%;
+            margin: 11px;
+          }
+        }
+      }
+    }
+    #project {
+      > div:nth-child(2) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+    #contact {
+      > div {
+        > div:nth-child(2) {
+          grid-template-columns: 1fr;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  header > nav > ul {
+    display: none;
+  }
+  header > nav {
+    padding: 0;
   }
 }
