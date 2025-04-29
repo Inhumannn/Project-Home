@@ -12,7 +12,7 @@
   --ff-title: "Prata", serif;
   --fz-title: 52px;
   --fw-title: normal;
-  --ff-p: "Prata", serif;
+  --ff-p: "Open Sans", sans-serif;
   --fz-p: 16px;
   --fw-p: normal;
 
@@ -48,7 +48,7 @@ a {
   background-color: var(--background-alt);
   border-radius: var(--card-radius);
 }
-.btn {
+.submit {
   font-family: "Open Sans", sans-serif;
   background-color: black;
   color: white;
@@ -170,6 +170,37 @@ footer {
       height: 380px;
       object-fit: cover;
       border-radius: var(--card-radius);
+    }
+  }
+}
+#contact {
+  max-width: 540px;
+  margin: auto;
+  padding: 100px 0;
+  h2 {
+    padding-bottom: 16px;
+  }
+  p {
+    padding-bottom: 12px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      padding: 12px;
+      border: 1px solid #69727d;
+      border-radius: 3px;
+      &::placeholder {
+        font-family: "Open Sans", sans-serif;
+        color: #7a7a7a;
+        font-size: 14px;
+      }
+    }
+    .submit {
+      text-align: center;
     }
   }
 }
