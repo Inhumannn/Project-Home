@@ -7,7 +7,7 @@
 :root {
   --text-color: #000;
   --background: #f7f7f7;
-  --background-alt: #333333;
+  --background-alt: #f1f1f1;
 
   --ff-title: "Prata", serif;
   --fz-title: 52px;
@@ -25,6 +25,11 @@ h2 {
   font-size: var(--fz-title);
   font-weight: var(--fw-title);
 }
+h3 {
+  font-family: var(--ff-title);
+  font-size: 19px;
+  font-weight: var(--fw-title);
+}
 p {
   font-family: var(--ff-p);
   font-size: var(--fz-p);
@@ -35,6 +40,21 @@ a {
   font-family: var(--ff-p);
   text-decoration: none;
   color: var(--text-color);
+}
+.tag {
+  max-width: max-content;
+  padding: 6px 12px;
+  color: var(--text-color);
+  background-color: var(--background-alt);
+  border-radius: var(--card-radius);
+}
+.btn {
+  font-family: "Open Sans", sans-serif;
+  background-color: black;
+  color: white;
+  padding: 13px 13px;
+  margin-top: 20px;
+  border-radius: 3px;
 }
 header {
   max-width: 1920px;
@@ -62,5 +82,94 @@ footer {
   > div {
     display: flex;
     gap: 20px;
+  }
+}
+#delights {
+  max-width: 1440px;
+  margin: auto;
+  padding: 100px 15px;
+  div:nth-child(1) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+  div:nth-child(2) {
+    max-width: 1278px;
+    margin: auto;
+    img {
+      width: 100%;
+      height: 380px;
+      border-radius: var(--card-radius);
+      object-fit: cover;
+      margin: 75px 0;
+    }
+  }
+}
+#specialties {
+  max-width: 1440px;
+  margin: auto;
+  padding: 0 15px 100px;
+  .tag {
+    justify-self: center;
+  }
+  h2 {
+    text-align: center;
+  }
+  > p {
+    text-align: center;
+  }
+  > div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    padding: 50px 0;
+    .card {
+      box-shadow: var(--card-box-shadow);
+      border-radius: var(--card-radius);
+      img {
+        border-radius: 12px 12px 0 0;
+        width: 100%;
+      }
+      > div {
+        padding-left: 10px;
+        h3 {
+          padding: 10px 0 5px;
+        }
+        p {
+          padding: 5px 0;
+        }
+        p:nth-child(2) {
+          font-size: 14px;
+        }
+        p:nth-child(3) {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
+#story {
+  background-color: var(--background);
+  padding: 100px 0;
+  > div {
+    max-width: 1440px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    #container-story {
+      h2 {
+        padding: 7px 0 14px;
+      }
+      > div {
+        margin: 30px 0;
+      }
+    }
+    img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      border-radius: var(--card-radius);
+    }
   }
 }
