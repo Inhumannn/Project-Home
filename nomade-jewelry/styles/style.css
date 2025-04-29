@@ -186,7 +186,37 @@ footer {
   }
 }
 @media screen and (max-width: 1024px) {
+  :root {
+    --fz-title: 38px;
+  }
+  body > header > div {
+    flex-direction: column;
+  }
+  #product {
+    > div {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 }
 
 @media screen and (max-width: 767px) {
+  body > header > div {
+    flex-direction: column;
+  }
+  header {
+    ul {
+      display: none;
+    }
+  }
+  #elegance {
+    > div {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  #product {
+    > div {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
 }
