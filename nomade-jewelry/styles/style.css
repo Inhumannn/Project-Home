@@ -49,6 +49,9 @@ a {
   margin-top: 20px;
   border-radius: 3px;
 }
+#fa-bars {
+  display: none;
+}
 header {
   max-width: 1440px;
   margin: auto;
@@ -200,12 +203,19 @@ footer {
 }
 
 @media screen and (max-width: 767px) {
-  body > header > div {
-    flex-direction: column;
+  :root {
+    --fz-title: 30px;
   }
   header {
+    img {
+      width: 100px;
+    }
     ul {
       display: none;
+    }
+    #fa-bars {
+      display: block !important;
+      color: var(--text-nav);
     }
   }
   #elegance {
@@ -218,5 +228,11 @@ footer {
     > div {
       grid-template-columns: repeat(1, 1fr);
     }
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px 15px;
   }
 }
