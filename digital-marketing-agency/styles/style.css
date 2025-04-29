@@ -87,7 +87,7 @@ a {
   align-items: center;
   gap: 25px;
 }
-.fa-bars {
+#fa-bars {
   display: none;
 }
 label {
@@ -328,6 +328,8 @@ footer {
 
 @media screen and (max-width: 767px) {
   header {
+    max-width: 1440px;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -345,7 +347,7 @@ footer {
       }
     }
   }
-  .fa-bars {
+  #fa-bars {
     display: block;
   }
   #home {
