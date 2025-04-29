@@ -35,7 +35,6 @@ p {
   font-size: var(--fz-p);
   font-weight: var(--fw-p);
 }
-
 a {
   font-family: var(--ff-p);
   text-decoration: none;

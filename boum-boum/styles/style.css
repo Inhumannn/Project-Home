@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Archivo", sans-serif;
+}
+:root {
+  --title-color: white;
+  --submit-background: black;
+}
+h1 {
+  font-size: 40px;
+  font-weight: normal;
+}
+h2 {
+  font-size: 35px;
+  font-weight: 600;
+}
+h3 {
+  font-size: 25px;
+  font-weight: 600;
+}
+.submit {
+  background-color: var(--submit-background);
+  color: var(--);
+}
