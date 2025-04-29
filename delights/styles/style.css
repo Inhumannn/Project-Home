@@ -150,7 +150,7 @@ footer {
 }
 #story {
   background-color: var(--background);
-  padding: 100px 0;
+  padding: 100px 15px;
   > div {
     max-width: 1440px;
     margin: auto;
@@ -176,7 +176,7 @@ footer {
 #contact {
   max-width: 540px;
   margin: auto;
-  padding: 100px 0;
+  padding: 100px 15px;
   h2 {
     padding-bottom: 16px;
   }
@@ -202,5 +202,55 @@ footer {
     .submit {
       text-align: center;
     }
+  }
+}
+@media screen and (max-width: 1024px) {
+  #delights {
+    div:nth-child(1) {
+      grid-template-columns: repeat(1, 1fr);
+      padding-right: 16%;
+      h1 {
+        padding-bottom: 12px;
+      }
+    }
+  }
+  #specialties {
+    > div {
+      grid-template-columns: repeat(2, 1fr);
+      article:nth-child(3) {
+        grid-column: 1/3;
+      }
+    }
+  }
+  #story {
+    > div {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  :root {
+    --fz-title: 43px;
+  }
+  header {
+    flex-direction: column;
+  }
+  #specialties > div {
+    grid-template-columns: repeat(1, 1fr);
+    article:nth-child(3) {
+      grid-column: auto;
+    }
+  }
+  #contact {
+    p {
+      padding-bottom: 24px;
+    }
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px 15px;
   }
 }
