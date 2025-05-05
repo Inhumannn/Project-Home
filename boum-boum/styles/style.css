@@ -2,6 +2,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: content-box;
   font-family: "Archivo", sans-serif;
 }
 :root {
@@ -9,12 +10,11 @@
   --black: black;
   --text-background: #f1f1f1;
 
-  --fz-title: 40px;
-  --fz-title2: 35px;
-  --fz-title3: 25px;
+  --fz-title: clamp(28px, 6vw, 40px);
+  --fz-title2: clamp(24px, 5vw, 35px);
+  --fz-title3: clamp(20px, 4vw, 25px);
   --fw-title: 600;
-
-  --fz-p: 16px;
+  --fz-p: clamp(14px, 3vw, 16px);
 }
 h1 {
   color: var(--white);
@@ -92,10 +92,12 @@ footer {
 }
 main {
   #events {
+    min-height: 400px;
     background-image: url(/boum-boum/img/background.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
+    background-size: cover;
     text-align: center;
     > div {
       max-width: 650px;
@@ -143,8 +145,7 @@ main {
     padding: 100px 15px;
     max-width: 1140px;
     margin: auto;
-    display: grid;
-    grid-template-columns: auto 25%;
+    display: flex;
     gap: 30px;
     p {
       color: #6b7280;
@@ -172,6 +173,7 @@ main {
     }
     > div:last-child {
       align-self: center;
+      flex: 1 0 30%;
       article {
         display: flex;
         flex-direction: column;
@@ -250,6 +252,70 @@ main {
       }
       a {
         max-width: none;
+        text-align: center;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  #agency {
+    > div {
+      flex-direction: column-reverse !important;
+    }
+  }
+  #portfolio {
+    .row {
+      flex-direction: column;
+    }
+    .row > div {
+      width: 100%;
+    }
+    .row img {
+      height: 180px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .logo {
+    width: 60px;
+  }
+  ul {
+    display: none !important;
+  }
+  #bars {
+    display: block;
+  }
+  #events {
+    min-height: 310px !important;
+  }
+  #services {
+    flex-direction: column-reverse;
+    > div:first-child {
+      display: block !important;
+      article:nth-child(n + 1) {
+        margin: 20px 0;
+      }
+    }
+  }
+  #portfolio {
+    .row img {
+      height: 150px;
+    }
+  }
+  #contact {
+    grid-template-columns: 1fr !important;
+    form {
+      div {
+        flex-direction: column;
+      }
+    }
+  }
+  footer {
+    > div {
+      flex-direction: column;
+      gap: 30px;
+      a {
         text-align: center;
       }
     }
