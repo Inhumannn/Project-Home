@@ -5,22 +5,141 @@
   font-family: "Archivo", sans-serif;
 }
 :root {
-  --title-color: white;
-  --submit-background: black;
+  --white: white;
+  --black: black;
+  --text-background: #f1f1f1;
+
+  --fz-title: 40px;
+  --fz-title2: 35px;
+  --fz-title3: 25px;
+  --fw-title: 600;
+
+  --fz-p: 16px;
 }
 h1 {
-  font-size: 40px;
+  color: var(--white);
+  font-size: var(--fz-title);
   font-weight: normal;
 }
 h2 {
-  font-size: 35px;
-  font-weight: 600;
+  font-size: var(--fz-title2);
+  font-weight: var(--fw-title);
 }
 h3 {
-  font-size: 25px;
-  font-weight: 600;
+  font-size: var(--fz-title3);
+  font-weight: var(--fz-title);
+}
+p {
+  font-size: var(--fz-p);
+}
+a {
+  text-decoration: none;
+  color: black;
 }
 .submit {
-  background-color: var(--submit-background);
-  color: var(--);
+  background-color: var(--black);
+  color: var(--white);
+  max-width: max-content;
+  padding: 12px 12px;
+}
+#bars {
+  display: none;
+}
+header {
+  max-width: 1440px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 15px 30px;
+  nav {
+    ul {
+      display: flex;
+      gap: 40px;
+      list-style: none;
+      li {
+        a {
+          color: var(--black);
+        }
+      }
+    }
+  }
+  img {
+    width: 100px;
+  }
+}
+footer {
+  padding: 30px 15px 15px;
+  background-color: var(--black);
+  color: #ffffff;
+  div {
+    max-width: 1440px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    > div {
+      display: flex;
+      gap: 50px;
+      a {
+        color: #ffffff;
+      }
+    }
+    img {
+      width: 100px;
+    }
+  }
+}
+main {
+  #events {
+    background-image: url(/boum-boum/img/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+    > div {
+      max-width: 650px;
+      margin: auto;
+      color: white;
+      padding: 10% 0;
+      p {
+        margin: 20px 0 30px;
+      }
+      > div {
+        a {
+          background-color: var(--white);
+          color: var(--black);
+          padding: 12px 12px;
+        }
+      }
+    }
+  }
+  #agency {
+    background-color: var(--text-background);
+    padding: 100px 15px;
+    > div {
+      max-width: 1140px;
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      gap: 35px;
+      > div:nth-child(1) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+      }
+      > div:nth-child(2) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  #services{
+    
+  }
 }
